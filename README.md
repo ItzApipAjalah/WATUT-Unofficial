@@ -2,6 +2,11 @@
 
 Note: This is a fork of the original [WATUT](https://github.com/Corosauce/WATUT) mod, specifically updated and ported to support Minecraft version 1.21.11.
 
+## Download
+
+You can download the latest compiled builds from the Jenkins CI:
+[Download WATUT Builds Here](https://ci.kotaklegend.my.id/view/watut/)
+
 ## Build Instructions (Fabric)
 
 To build the Fabric version of this mod, you will need the corresponding version of the `coroutil` library available locally.
