@@ -11,13 +11,29 @@ pipeline {
         
         stage('Prepare Dependencies') {
             steps {
-                // Catatan: Karena mod ini membutuhkan coroutil-fabric di folder 'libs', 
-                // Anda mungkin perlu menambahkan langkah untuk mendownload/build coroutil terlebih dahulu,
-                // atau pastikan file jar tersebut tersedia di environment Jenkins.
-                echo 'Memastikan dependencies siap...'
-                
-                // Contoh jika Anda ingin membuat folder libs:
-                // sh 'mkdir -p libs'
+                echo 'Mengambil dan mem-build coroutil...'
+                script {
+                    if (isUnix()) {
+                        sh '''
+                        mkdir -p libs
+                        git clone https://github.com/ItzApipAjalah/coroutil-unofficial.git coroutil_repo
+                        cd coroutil_repo
+                        chmod +x ./gradlew
+                        ./gradlew build -b build_fabric.gradle --no-daemon
+                        cp build/libs/coroutil-fabric-*.jar ../libs/
+                        cd ..
+                        '''
+                    } else {
+                        bat '''
+                        if not exist "libs" mkdir "libs"
+                        git clone https://github.com/ItzApipAjalah/coroutil-unofficial.git coroutil_repo
+                        cd coroutil_repo
+                        .\\gradlew.bat build -b build_fabric.gradle --no-daemon
+                        copy build\\libs\\coroutil-fabric-*.jar ..\\libs\\
+                        cd ..
+                        '''
+                    }
+                }
             }
         }
 

@@ -7,8 +7,8 @@ Note: This is a fork of the original [WATUT](https://github.com/Corosauce/WATUT)
 To build the Fabric version of this mod, you will need the corresponding version of the `coroutil` library available locally.
 
 ### 1. Build CoroUtil
-First, you need to build the `coroutil` library and obtain its Fabric jar.
-1. Navigate to your `coroutil` project directory.
+First, you need to build the `coroutil` library and obtain its Fabric jar. You can find the 1.21.11 fork here: [coroutil-unofficial](https://github.com/ItzApipAjalah/coroutil-unofficial).
+1. Clone and navigate to your `coroutil-unofficial` project directory.
 2. Run the build command for Fabric:
    ```bash
    ./gradlew build -b build_fabric.gradle
