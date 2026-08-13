@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        // Pastikan Anda telah mengonfigurasi JDK 21 di Jenkins (Manage Jenkins -> Global Tool Configuration)
-        jdk 'jdk21' 
-    }
 
     stages {
         stage('Checkout') {
