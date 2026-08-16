@@ -5,7 +5,7 @@ Note: This is a fork of the original [WATUT](https://github.com/Corosauce/WATUT)
 ## Download
 
 You can download the latest compiled builds from the Jenkins CI:
-[Download WATUT Builds Here](https://ci.kotaklegend.my.id/view/watut/)
+[Download WATUT Builds Here](https://ci.kotaklegend.my.id/view/Minecraft-Forked-Mod/)
 
 ## Build Instructions (Fabric)
 
